@@ -4,6 +4,20 @@
 .site-header {
     nav {
         border-top: 5px solid $gray-dark;
+
+        .icon > svg {
+            path {
+                fill: $gray-dark;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    .site-header nav .icon > svg {
+        width: 16px;
+        height: 16px;
+        margin-right: .5em;
     }
 }
 
@@ -14,6 +28,7 @@
 .site-content {
     min-height: 600px;
     padding-top: $navbar-height + $navbar-margin-bottom;
+    padding-bottom: $line-height-computed * 3;
     background-color: $body-bg;
 }
 
@@ -22,8 +37,8 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $gray-light;
     padding: $line-height-computed 0;
+    border-top: 1px solid $gray-light;
     color: $gray-light;
 }
 
@@ -34,5 +49,9 @@
 
     li {
         display: inline;
+    }
+
+    .icon > svg {
+        margin-right: .5em;
     }
 }

@@ -15,13 +15,37 @@
 
                         <div id="main-navbar" class="navbar-collapse collapse navbar-right">
                             <ul class="nav navbar-nav">
-                                {% for page in site.pages %}
+                                <!-- {% for page in site.pages %}
                                     {% if page.title %}
                                         <li>
                                             <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                                         </li>
                                     {% endif %}
-                                {% endfor %}
+                                {% endfor %} -->
+                                {% if site.github_username %}
+                                    <li>
+                                        <a href="https://github.com/{{ site.github_username }}">
+                                            {% include svg-github-icon.html %}
+                                            <span class="visible-xs-inline">GitHub</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                {% if site.twitter_username %}
+                                    <li>
+                                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                                            {% include svg-twitter-icon.html %}
+                                            <span class="visible-xs-inline">Twitter</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                <li>
+                                    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                                        {% include svg-rss-icon.html %}
+                                        <span class="visible-xs-inline">RSS Feed</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
