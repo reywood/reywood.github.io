@@ -1,7 +1,11 @@
 *.gem
 *.rbc
+*.sublime-project
+*.sublime-workspace
+
 .bundle/
 .sass-cache/
 _site/
 vendor/
+
 Gemfile.lock

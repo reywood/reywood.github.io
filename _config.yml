@@ -1,10 +1,8 @@
 # Site settings
-title: Eat. Drink. Code. Wander.
+title: braindump.io
 email: sean.dwyer@gmail.com
 description: >
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+    Eat. Drink. Code. Wander.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://braindump.io" # the base hostname & protocol for your site
 twitter_username: reywood
@@ -16,3 +14,4 @@ highlighter: pygments
 exclude:
     - Gemfile
     - vendor
+    - about.md

@@ -2,6 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
+    margin-top: $line-height-computed / 2;
     background: #fff;
     @extend %vertical-rhythm;
 

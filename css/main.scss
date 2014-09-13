@@ -4,40 +4,23 @@
 @charset "utf-8";
 
 
-
 // Our variables
-$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
+$font-size-base:   16px;
+$font-size-small:  $font-size-base * 0.875;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$body-bg:          #fdfdfd;
+$brand-primary:    #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$gray:       #828282;
+$gray-light: lighten($gray, 40%);
+$gray-dark:  darken($gray, 25%);
 
-$screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
-$screen-phone: $screen-xs;
-$screen-tablet: $screen-sm;
-$screen-laptop: $screen-md;
-$screen-desktop: $screen-lg;
+$container-sm: 720px;
+$container-md: 820px;
+$container-lg: 820px;
 
 
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -45,10 +28,10 @@ $screen-desktop: $screen-lg;
 }
 
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@import "bootstrap/bootstrap";
+@import "base";
+@import "layout";
+@import "page";
+@import "post";
+@import "syntax-highlighting";
