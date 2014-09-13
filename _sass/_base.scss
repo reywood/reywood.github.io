@@ -124,6 +124,11 @@ pre {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+        white-space: pre;
+        word-break: normal;
+        word-wrap: normal;
+        overflow-wrap: normal;
+        overflow-x: auto;
     }
 }
 

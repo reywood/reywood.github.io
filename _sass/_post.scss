@@ -62,3 +62,9 @@
         }
     }
 }
+
+.comments-container {
+    margin-top: $line-height-computed * 2;
+    border-top: 1px solid $gray-light;
+    padding-top: $line-height-computed;
+}
