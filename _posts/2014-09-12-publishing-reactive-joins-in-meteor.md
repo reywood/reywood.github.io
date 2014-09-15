@@ -95,7 +95,7 @@ Meteor.publishComposite("tenNewestArticles", {
 });
 {% endhighlight %}
 
-The first argument to `Meteor.publishComposite`, as you guessed, is the name of the publication. Nothing new there. The the second argument is an object literal with two properties, `find` and `children`.
+The first argument to `Meteor.publishComposite`, as you guessed, is the name of the publication. Nothing new there. The second argument is an object literal with two properties, `find` and `children`.
 
 The `find` property is a function which returns a cursor. This is very important. The `find` function **must** return a cursor which is why we use `Meteor.users.find` instead of `Meteor.users.findOne` to find the authors. Returning a cursor is what makes this whole thing reactive. Also worth noting, `find` functions are run in the context of your publication, so you'll have access to properties like `this.userId` as you would in a normal publication.
 
