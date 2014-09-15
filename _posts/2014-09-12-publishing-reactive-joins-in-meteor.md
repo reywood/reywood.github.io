@@ -9,7 +9,9 @@ tags:
     - javascript
     - meteor
 ---
-Publishing many related documents from different MongoDB collections in your Meteor app can be a hairy problem. You might find yourself calling `Meteor.publish` several times to get all the documents you need. [`Meteor.publishComposite`][publish-composite] was created to solve this problem in a flexible manner.
+Publishing many related documents from different MongoDB collections in your [Meteor][meteor] app can be a hairy problem. You might find yourself calling `Meteor.publish` several times to get all the documents you need pushed to the client. The [reywood:publish-composite][publish-composite] package was created to solve this problem in a flexible manner. It exposes one new function called `Meteor.publishComposite`.
+
+For the purposes of this post, I'm going to assume that you're already familiar with [Meteor][meteor], and that you're capable of following the simple installation instructions on the [reywood:publish-composite][publish-composite] page.
 
 ### The basics
 
@@ -186,4 +188,5 @@ Get as creative as you like with your relationships.
 So there you are. You've published a bunch of documents from various collections and in a somewhat sensible manner. Feels good, doesn't it?
 
 
+[meteor]: https://www.meteor.com/
 [publish-composite]: https://atmospherejs.com/reywood/publish-composite
