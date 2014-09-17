@@ -1,0 +1,34 @@
+.site-header {
+    nav.navbar {
+        border-top: 5px solid $gray-dark;
+
+        .navbar-nav a.social-icon-link {
+            color: $gray-dark;
+
+            .icon > svg {
+                path,
+                rect {
+                    fill: $gray-dark;
+                }
+            }
+
+            &:hover,
+            &:hover .icon > svg {
+                color: $code-color;
+
+                path,
+                rect {
+                    fill: $code-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    .site-header nav .icon > svg {
+        width: 16px;
+        height: 16px;
+        margin-right: .25em;
+    }
+}

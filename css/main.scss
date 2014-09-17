@@ -31,7 +31,9 @@ $container-lg: 820px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "bootstrap/bootstrap";
 @import "base";
-@import "layout";
+@import "site-header";
+@import "site-content";
+@import "site-footer";
 @import "page";
 @import "post";
 @import "syntax-highlighting";

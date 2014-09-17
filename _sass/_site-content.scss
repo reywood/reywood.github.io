@@ -1,0 +1,9 @@
+/**
+ * Site body
+ */
+.site-content {
+    min-height: 600px;
+    padding-top: $navbar-height + $navbar-margin-bottom;
+    padding-bottom: $line-height-computed * 3;
+    background-color: $body-bg;
+}

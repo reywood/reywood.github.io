@@ -22,30 +22,19 @@
                                         </li>
                                     {% endif %}
                                 {% endfor %} -->
-                                {% if site.github_username %}
-                                    <li>
-                                        <a href="https://github.com/{{ site.github_username }}">
-                                            {% include svg-github-icon.html %}
-                                            <span class="visible-xs-inline">GitHub</span>
+                                {% for menu_link in site.menu_links %}
+                                    <li class="hidden-xs">
+                                        <a class="social-icon-link" href="{{ menu_link.url }}" title="{{ menu_link.name }}">
+                                            {% include {{menu_link.icon_file}} %}
                                         </a>
                                     </li>
-                                {% endif %}
-
-                                {% if site.twitter_username %}
-                                    <li>
-                                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                                            {% include svg-twitter-icon.html %}
-                                            <span class="visible-xs-inline">Twitter</span>
+                                    <li class="visible-xs-block">
+                                        <a class="social-icon-link" href="{{ menu_link.url }}">
+                                            {% include {{menu_link.icon_file}} %}
+                                            <span>{{ menu_link.name }}</span>
                                         </a>
                                     </li>
-                                {% endif %}
-
-                                <li>
-                                    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                                        {% include svg-rss-icon.html %}
-                                        <span class="visible-xs-inline">RSS Feed</span>
-                                    </a>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>

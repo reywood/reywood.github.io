@@ -4,8 +4,27 @@ email: sean.dwyer@gmail.com
 description: Eat. Drink. Code. Wander.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://braindump.io" # the base hostname & protocol for your site
-twitter_username: reywood
-github_username:  reywood
+
+menu_links:
+    - name: GitHub
+      url: http://github.com/reywood
+      icon_file: svg-github-icon.html
+
+    - name: Twitter
+      url: http://twitter.com/reywood
+      icon_file: svg-twitter-icon.html
+
+    - name: Stack Overflow
+      url: http://careers.stackoverflow.com/seandwyer
+      icon_file: svg-stackoverflow-icon.html
+
+    - name: LinkedIn
+      url: http://www.linkedin.com/in/sdwyer/
+      icon_file: svg-linkedin-icon.html
+
+    - name: RSS Feed
+      url: /feed.xml
+      icon_file: svg-rss-icon.html
 
 # Build settings
 markdown: kramdown
@@ -14,3 +33,4 @@ exclude:
     - Gemfile
     - vendor
     - about.md
+    - run-local.sh

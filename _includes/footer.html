@@ -1,36 +1,9 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-xs-5">
-                <ul class="social-media-list">
-                    {% if site.github_username %}
-                        <li>
-                            <a href="https://github.com/{{ site.github_username }}">
-                                {% include svg-github-icon.html %}
-                            </a>
-                        </li>
-                    {% endif %}
-
-                    {% if site.twitter_username %}
-                        <li>
-                            <a href="https://twitter.com/{{ site.twitter_username }}">
-                                {% include svg-twitter-icon.html %}
-                            </a>
-                        </li>
-                    {% endif %}
-
-                    <li>
-                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                            {% include svg-rss-icon.html %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-xs-7 text-right">
+            <div class="col-xs-12 text-right">
                 <p class="text">
-                    {{ site.description }}<br>
-                    by Sean Dwyer
+                    Brought to you by Sean Dwyer
                 </p>
             </div>
         </div>
