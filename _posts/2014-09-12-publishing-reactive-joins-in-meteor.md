@@ -8,6 +8,7 @@ categories:
 tags:
     - javascript
     - meteor
+    - publishComposite
 ---
 Publishing many related documents from different MongoDB collections in your [Meteor][meteor] app can be a hairy problem. You might find yourself calling `Meteor.publish` several times to get all the documents you need pushed to the client. The [reywood:publish-composite][publish-composite] package was created to solve this problem in a flexible manner. It exposes one new function called `Meteor.publishComposite`.
 
