@@ -2,9 +2,9 @@
  * Syntax highlighting styles
  */
 .highlight {
-    margin-top: $line-height-computed / 2;
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
     background: #fff;
-    @extend %vertical-rhythm;
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
