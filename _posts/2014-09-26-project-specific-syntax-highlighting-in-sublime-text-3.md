@@ -8,9 +8,9 @@ categories:
 tags:
     - sublime-text
 ---
-At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects pretty much always have HTML files in them. Each stack, however, generally has its own templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
+At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects almost always include HTML files. Each stack, however, generally has its own HTML templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
 
-There's no built in way (that I could find) to say that this project should use this syntax highligher for HTML files, and that project should use another. I searched for solutions to the problem, but came up empty, so I decided I may as well write my first Sublime Text plugin. And today I share it with you.
+There's no built in way (that I could find) to configure this project to use this syntax highligher for HTML files, and that project should use another. I searched for solutions to the problem, but came up empty, so I decided I may as well write my first Sublime Text plugin. And today I share it with you.
 
 First off, you'll need to save the python code below to a file in your `Packages/User` directory. Where this directory is located depends on your system. On MacOS, it's at `~/Library/Application Support/Sublime Text 3/Packages/User`. Give the file a name such as `project_specific_file_syntax.py`.
 
@@ -61,7 +61,7 @@ Now, you just need to add a `syntax_override` section to your `.sublime-project`
 }
 {% endhighlight %}
 
-The `syntax_override` section can contain as many key/value pairs as you like. The key should be a regular expression that will be matched against the name of the file. The value should be an array containing two strings. The first string is the name of the package containing the syntax file and the second is the name of the syntax. Root around in Sublime Text's directory structure to find files that end with `.tmLanguage`. The names of these files (minus the `.tmLanguage` extension) are what you would use for the second string.
+The `syntax_override` section can contain as many key/value pairs as you like. The key should be a regular expression that will be matched against the name of the file. Note that the `.` in `.html` has to be escaped to `\.` since it will match any character otherwise. And since this is a JSON string, we need to escape the slash, so we end up with `\\.`. The value in the key/value pair should be an array containing two strings. The first string is the name of the package containing the syntax file and the second is the name of the syntax. Root around in Sublime Text's directory structure to find files that end with `.tmLanguage`. The names of these files (minus the `.tmLanguage` extension) are what you would use for the second string.
 
 I've only tested this with Sublime Text 3, but I'm sure it could be easily adapted to work with Sublime Text 2. Happy coding!
 
