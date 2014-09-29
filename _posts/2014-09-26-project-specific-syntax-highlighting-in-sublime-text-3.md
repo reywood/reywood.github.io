@@ -8,7 +8,7 @@ categories:
 tags:
     - sublime-text
 ---
-At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects pretty much always have HTML files in them. Each stack, however, generally has its own templating engine with its own syntax. This is where a stock Sublime Text setup falls short.
+At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects pretty much always have HTML files in them. Each stack, however, generally has its own templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
 
 There's no built in way (that I could find) to say that this project should use this syntax highligher for HTML files, and that project should use another. I searched for solutions to the problem, but came up empty, so I decided I may as well write my first Sublime Text plugin. And today I share it with you.
 
@@ -69,3 +69,6 @@ I've only tested this with Sublime Text 3, but I'm sure it could be easily adapt
 [meteor]: https://www.meteor.com/
 [jekyll]: http://jekyllrb.com/
 [backbone]: http://backbonejs.org/
+[handlebars]: http://handlebarsjs.com/
+[liquid]: http://liquidmarkup.org/
+[underscore]: http://underscorejs.org/#template
