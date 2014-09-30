@@ -65,6 +65,8 @@ The `syntax_override` section can contain as many key/value pairs as you like. T
 
 I've only tested this with Sublime Text 3, but I'm sure it could be easily adapted to work with Sublime Text 2. Happy coding!
 
+UPDATE: I went ahead and made this an installable package with the name "Project Specific Syntax Settings". It is installable via Package Control. The package is only compatible with Sublime Text 3 right now, but I may look into ST2 support at some point.
+
 
 [meteor]: https://www.meteor.com/
 [jekyll]: http://jekyllrb.com/
