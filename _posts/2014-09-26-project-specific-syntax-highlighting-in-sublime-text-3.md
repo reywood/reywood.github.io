@@ -10,7 +10,7 @@ tags:
 ---
 At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects almost always include HTML files. Each stack, however, generally has its own HTML templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
 
-There's no built in way (that I could find) to configure this project to use this syntax highligher for HTML files, and that project should use another. I searched for solutions to the problem, but came up empty, so I decided I may as well write my first Sublime Text plugin. And today I share it with you.
+There's no built in way (that I could find) to configure one project to use a specific syntax highligher for HTML files, and another project to use a different syntax highlighter. I searched for solutions to the problem, but came up empty, so I decided I may as well write my first Sublime Text plugin. And today I share it with you.
 
 First off, you'll need to save the python code below to a file in your `Packages/User` directory. Where this directory is located depends on your system. On MacOS, it's at `~/Library/Application Support/Sublime Text 3/Packages/User`. Give the file a name such as `project_specific_file_syntax.py`.
 
