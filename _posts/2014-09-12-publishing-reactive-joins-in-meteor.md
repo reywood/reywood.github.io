@@ -16,7 +16,7 @@ For the purposes of this post, I'm going to assume that you're already familiar 
 
 ### The basics
 
-Let's say you run a site that allows users to post articles and also comment on those articles. Let's also say that, for whatever reason, you don't want to normalize this data so that articles and comments are in separate collections. You'd have a couple of collections defined in your Meteor code that look like this.
+Let's say you run a site that allows users to post articles and also comment on those articles. Let's also say that, for whatever reason, you want to [normalize][database-normalization] this data so that articles and comments are in separate collections. You'd have a couple of collections defined in your Meteor code that look like this.
 
 {% highlight javascript %}
 Articles = new Meteor.Collection("articles");
@@ -191,3 +191,4 @@ So there you are. You've published a bunch of documents from various collections
 
 [meteor]: https://www.meteor.com/
 [publish-composite]: https://atmospherejs.com/reywood/publish-composite
+[database-normalization]: http://en.wikipedia.org/wiki/Database_normalization
