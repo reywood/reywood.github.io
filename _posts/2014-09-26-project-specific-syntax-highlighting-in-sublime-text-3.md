@@ -7,6 +7,8 @@ categories:
     - sublime-text
 tags:
     - sublime-text
+updates:
+    - I went ahead and made this a package with the name "Project Specific Syntax Settings" installable via [Package Control](https://sublime.wbond.net/). The package is only compatible with Sublime Text 3. Check it out [on GitHub](https://github.com/reywood/sublime-project-specific-syntax).
 ---
 At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects almost always include HTML files. Each stack, however, generally has its own HTML templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
 
@@ -63,10 +65,7 @@ Now, you just need to add a `syntax_override` section to your `.sublime-project`
 
 The `syntax_override` section can contain as many key/value pairs as you like. The key should be a regular expression that will be matched against the name of the file. Note that the `.` in `.html` has to be escaped to `\.` since it will match any character otherwise. And since this is a JSON string, we need to escape the slash, so we end up with `\\.`. The value in the key/value pair should be an array containing two strings. The first string is the name of the package containing the syntax file and the second is the name of the syntax. Root around in Sublime Text's directory structure to find files that end with `.tmLanguage`. The names of these files (minus the `.tmLanguage` extension) are what you would use for the second string.
 
-I've only tested this with Sublime Text 3, but I'm sure it could be easily adapted to work with Sublime Text 2. Happy coding!
-
-**UPDATE:** I went ahead and made this an installable package with the name "Project Specific Syntax Settings". It is installable via [Package Control][package-control]. The package is only compatible with Sublime Text 3 right now, but I may look into ST2 support at some point.
-
+Unfortunately, Sublime Text 2 users are out of luck as the plugin API for that version does not appear to provide access to project settings. You'll just have to upgrade to Sublime Text 3. Happy coding!
 
 [meteor]: https://www.meteor.com/
 [jekyll]: http://jekyllrb.com/
@@ -74,4 +73,3 @@ I've only tested this with Sublime Text 3, but I'm sure it could be easily adapt
 [handlebars]: http://handlebarsjs.com/
 [liquid]: http://liquidmarkup.org/
 [underscore]: http://underscorejs.org/#template
-[package-control]: https://sublime.wbond.net/

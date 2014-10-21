@@ -3,20 +3,26 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </header>
 
-  <article class="post-content">
-    {{ content }}
+    <article class="post-content">
+        {% if page.updates %}
+            {% for update in page.updates %}
+                <blockquote><b>UPDATE:</b> <i>{{update | markdownify}}</i></blockquote>
+            {% endfor %}
+        {% endif %}
 
-    {% if page.disqus_identifier %}
-        <p>
-            Got any comments or questions about this post? Let me have it in the comments section below.
-        </p>
-    {% endif %}
-  </article>
+        {{ content }}
+
+        {% if page.disqus_identifier %}
+            <p>
+                Got any comments or questions about this post? Let me have it in the comments section below.
+            </p>
+        {% endif %}
+    </article>
 
 </div>
 
