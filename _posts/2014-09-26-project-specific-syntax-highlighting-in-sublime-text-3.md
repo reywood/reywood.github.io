@@ -8,7 +8,7 @@ categories:
 tags:
     - sublime-text
 updates:
-    - I went ahead and made this a package with the name "Project Specific Syntax Settings" installable via [Package Control](https://sublime.wbond.net/). The package is only compatible with Sublime Text 3. Check it out [on GitHub](https://github.com/reywood/sublime-project-specific-syntax).
+    - I went ahead and made this a package with the name "Project Specific Syntax Settings" installable via [Package Control](https://packagecontrol.io/packages/Project%20Specific%20Syntax%20Settings). The package is only compatible with Sublime Text 3. Check it out [on GitHub](https://github.com/reywood/sublime-project-specific-syntax).
 ---
 At any given time, I have several projects that I'm working on or maintaining. It's not uncommon for these projects to use different technology stacks ([Meteor][meteor], [Jekyll][jekyll], [Backbone][backbone], etc), and since I mainly develop web applications, these projects almost always include HTML files. Each stack, however, generally has its own HTML templating engine with its own syntax. It could be [Handlebars][handlebars], [Liquid][liquid], [Underscore][underscore], etc. This is where a stock Sublime Text setup falls short.
 
